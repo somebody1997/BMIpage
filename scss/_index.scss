@@ -1,0 +1,192 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: bubble, "微軟正黑體", "Microsoft JhengHei";
+}
+body, html{
+    height: 100%;
+    color: $primary-dark;
+    background-color: $body-color;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.wrap{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+.list-main{
+    padding-bottom: 95px;
+}
+.header{
+    background-color: $primary-dark;
+}
+.calcArea{
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: block;
+    background-image: url(../img/BMICLogo.png);
+    width: 117px;
+    height: 117px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+.calcInput{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    label{
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+        color: $primary-yellow;
+    }
+    input[type=text]{
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        background-color: $secondary-dark;
+        border-radius: 5px;
+        border: 2px solid $primary-yellow;
+        color: #ffffff;
+    }
+    ::placeholder{
+        color: rgba(255,255,255,0.5);
+    }
+}
+.btn{
+    border: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.submitBtn{
+    background-color: $primary-yellow;
+    color: $primary-dark;
+    font-size: 1.5em;
+    &:hover{
+        box-shadow: 0 1px 6px 3px $primary-yellow;
+    }
+    &:focus{
+        background-color:$hover-yellow;
+    }
+}
+.status{
+    display: none;
+    align-items: center;
+}
+.statusPanel{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid;
+    margin-right: 10px;
+    h3{
+        font-size: 2rem;
+    }
+}
+.refreshBtn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid $primary-dark;
+    img{
+        width: 15px;
+        height: 19px;
+        transition: all.6s;
+    }
+    &:hover{
+        cursor:pointer;
+        img{
+            transform: rotate(1turn);
+        }
+    }
+}
+.statusText{
+    font-size: 2rem;
+}
+
+.calclist{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    h2{
+        font-size: 1.5em;
+        padding: 50px 0;
+    }
+}
+.alertText{
+    position: absolute;
+    top: 15px;
+    color:$weight-xxxl;
+    font-size: 1.25rem;
+}
+.listtable{
+    width: 100%;
+}
+.listItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-left: 6px solid;
+    padding: 20px 5%;
+    margin-bottom: 20px;
+    & > div{
+        display: flex;
+        align-items: center;
+        width: 15%;
+        h5{
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    & > div:last-child{
+        width: 5%;
+    }
+}
+.listDelete{
+    display: block;
+    width: 100%;
+    img{
+        margin: 0 auto;
+        width: 300px;
+    }
+}
+.clearAll{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -95px;
+    background-color: $primary-yellow;
+}
+

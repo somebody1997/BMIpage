@@ -1,0 +1,31 @@
+// 狀態色彩
+.weight-regular{
+    &-color{color: $weight-regular;}
+    &-border{border-color: $weight-regular;}
+    &-bg{background-color: $weight-regular;}
+}
+.weight-light{
+    &-color{color: $weight-light;}
+    &-border{border-color: $weight-light;}
+    &-bg{background-color: $weight-light;}
+}
+.weight-fat{
+    &-color{color: $weight-fat;}
+    &-border{border-color: $weight-fat;}
+    &-bg{background-color: $weight-fat;}
+}
+.weight-xl{
+    &-color{color: $weight-xl;}
+    &-border{border-color: $weight-xl;}
+    &-bg{background-color: $weight-xl;}
+}
+.weight-xxl{
+    &-color{color: $weight-xxl;}
+    &-border{border-color: $weight-xxl;}
+    &-bg{background-color: $weight-xxl;}
+}
+.weight-xxxl{
+    &-color{color: $weight-xxxl;}
+    &-border{border-color: $weight-xxxl;}
+    &-bg{background-color: $weight-xxxl;}
+}

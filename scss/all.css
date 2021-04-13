@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: bubble;
+  src: url(../font/jf-openhuninn-1.1.ttf);
+}
+
+
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: bubble, "微軟正黑體", "Microsoft JhengHei";
+}
+
+body, html {
+  height: 100%;
+  color: #424242;
+  background-color: #efefef;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.list-main {
+  padding-bottom: 95px;
+}
+
+.header {
+  background-color: #424242;
+}
+
+.calcArea {
+  padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: block;
+  background-image: url(../img/BMICLogo.png);
+  width: 117px;
+  height: 117px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.calcInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 250px;
+}
+
+.calcInput label {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #FFD366;
+}
+
+.calcInput input[type=text] {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+  border: 2px solid #FFD366;
+  color: #ffffff;
+}
+
+.calcInput ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.calcInput :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.calcInput ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.calcInput ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  border: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.submitBtn {
+  background-color: #FFD366;
+  color: #424242;
+  font-size: 1.5em;
+}
+
+.submitBtn:hover {
+  -webkit-box-shadow: 0 1px 6px 3px #FFD366;
+          box-shadow: 0 1px 6px 3px #FFD366;
+}
+
+.submitBtn:focus {
+  background-color: #DEA921;
+}
+
+.status {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statusPanel {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 6px solid;
+  margin-right: 10px;
+}
+
+.statusPanel h3 {
+  font-size: 2rem;
+}
+
+.refreshBtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #424242;
+}
+
+.refreshBtn img {
+  width: 15px;
+  height: 19px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.refreshBtn:hover {
+  cursor: pointer;
+}
+
+.refreshBtn:hover img {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+}
+
+.statusText {
+  font-size: 2rem;
+}
+
+.calclist {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.calclist h2 {
+  font-size: 1.5em;
+  padding: 50px 0;
+}
+
+.alertText {
+  position: absolute;
+  top: 15px;
+  color: #FF1200;
+  font-size: 1.25rem;
+}
+
+.listtable {
+  width: 100%;
+}
+
+.listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-left: 6px solid;
+  padding: 20px 5%;
+  margin-bottom: 20px;
+}
+
+.listItem > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+}
+
+.listItem > div h5 {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.listItem > div p {
+  font-size: 1.5rem;
+}
+
+.listItem > div:last-child {
+  width: 5%;
+}
+
+.listDelete {
+  display: block;
+  width: 100%;
+}
+
+.listDelete img {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.clearAll {
+  display: none;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  margin-top: -95px;
+  background-color: #FFD366;
+}
+
+.weight-regular-color {
+  color: #86D73F;
+}
+
+.weight-regular-border {
+  border-color: #86D73F;
+}
+
+.weight-regular-bg {
+  background-color: #86D73F;
+}
+
+.weight-light-color {
+  color: #31BAF9;
+}
+
+.weight-light-border {
+  border-color: #31BAF9;
+}
+
+.weight-light-bg {
+  background-color: #31BAF9;
+}
+
+.weight-fat-color {
+  color: #FF982D;
+}
+
+.weight-fat-border {
+  border-color: #FF982D;
+}
+
+.weight-fat-bg {
+  background-color: #FF982D;
+}
+
+.weight-xl-color {
+  color: #FF6C02;
+}
+
+.weight-xl-border {
+  border-color: #FF6C02;
+}
+
+.weight-xl-bg {
+  background-color: #FF6C02;
+}
+
+.weight-xxl-color {
+  color: #FF6C02;
+}
+
+.weight-xxl-border {
+  border-color: #FF6C02;
+}
+
+.weight-xxl-bg {
+  background-color: #FF6C02;
+}
+
+.weight-xxxl-color {
+  color: #FF1200;
+}
+
+.weight-xxxl-border {
+  border-color: #FF1200;
+}
+
+.weight-xxxl-bg {
+  background-color: #FF1200;
+}
+/*# sourceMappingURL=all.css.map */
